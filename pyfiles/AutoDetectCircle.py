@@ -87,9 +87,7 @@ def processCircles(state, resized_img, filename, pixel_distance, manual_list):
                 top_90percentile = int(len(manual_list) * 0.9)
                 result += '# of circles found: ' + str(len(manual_list))
                 rad_list = manual_list
-
         else:
-
             # Convert the circle parameters a, b and r to integers.
             detected_circles = np.uint16(np.around(detected_circles))
 
@@ -130,7 +128,7 @@ def processCircles(state, resized_img, filename, pixel_distance, manual_list):
 def tableData():
     global rad_list, row_list, dataForTable, col_list, bottom_10percentile, top_90percentile, detected_circles, dataForTable
 
-    if not rad_list:
+    if rad_list:
         temp_1 = ' '
         temp_2 = ' '
         temp_3 = ' '
